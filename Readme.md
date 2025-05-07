@@ -99,12 +99,12 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
 
 9. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
-
+    
    ```bash
    docker exec -it airflow-docker-airflow-webserver-1 bashdocker exec -it airflow-docker-airflow-webserver-1 bash
    ``` 
 
-10. **Run Airflow with Docker:**
+11. **Run Airflow with Docker:**
 
    Build and start the Airflow Docker containers:
 
@@ -138,3 +138,34 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
     The API extraction step includes exception handling for failed requests.
 
     Any errors encountered during the pipeline execution will be logged by Airflow.
+
+```
+
+├── dags/
+│   ├── weather\_etl\_dag.py         # Airflow DAG definition
+│   ├── fetch\_weather.py           # API data extraction script
+│   └── weather\_raw\.json           # Sample raw data
+│
+├── dbt\_project/
+│   ├── models/
+│   │   ├── staging/
+│   │   │   └── stg\_weather\_raw\.sql
+│   │   ├── marts/
+│   │   │   ├── dim\_location.sql
+│   │   │   ├── dim\_date.sql
+│   │   │   ├── dim\_weather\_condition.sql
+│   │   │   └── fact\_weather.sql
+│   │   └── tests/
+│   │       ├── fact\_weather\_test.sql
+│   │       └── test\_extract.py    # Unit tests for fetch\_weather.py
+│   ├── dbt\_project.yml
+│   └── profiles.yml
+│
+├── tests/
+│   └── test\_extract.py            # Unit tests for fetch\_weather.py
+│
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+
+````
