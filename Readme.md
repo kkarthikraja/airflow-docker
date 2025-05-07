@@ -13,7 +13,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 - **Docker** – Containerized setup
 - **Docker Desktop** 
 - **pytest** – Unit testing
-- **OpenWeatherMap API** – Real-time weather source [openweathermap](https://openweathermap.org/)
+- **OpenWeatherMap API** – Real-time weather data source [openweathermap](https://openweathermap.org/)
 
 ---
 
