@@ -26,23 +26,23 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 │   ├── fetch_weather.py           # API data extraction script
 │   └── weather_raw.json           # Sample raw data
 │
-├── dbt\_project/
-│   ├── models/
-│   │   ├── staging/
-│   │   │   └── stg\_weather\_raw\.sql
-│   │   ├── marts/
-│   │   │   ├── dim\_location.sql
-│   │   │   ├── dim\_date.sql
-│   │   │   ├── dim\_weather\_condition.sql
-│   │   │   └── fact\_weather.sql
-│   │   └── tests/
-│   │       ├── fact\_weather\_test.sql
-│   │       └── test\_extract.py    # Unit tests for fetch\_weather.py
-│   ├── dbt\_project.yml
-│   └── profiles.yml
+│   └── dbt_project/
+│   │   ├── models/
+│   │   │   ├── staging/
+│   │   │   │   └── stg_weather_raw.sql
+│   │   │   ├── marts/
+│   │   │   │   ├── dim_location.sql
+│   │   │   │   ├── dim_date.sql
+│   │   │   │   ├── dim_weather_condition.sql
+│   │   │   │   └── fact_weather.sql
+│   │   │   └── tests/
+│   │   │       ├── fact_weather_test.sql
+│   │   │       └── test_extract.py    # Unit tests for fetch\_weather.py
+│   │   ├── dbt_project.yml
+│   │   └── profiles.yml
 │
 ├── tests/
-│   └── test\_extract.py            # Unit tests for fetch\_weather.py
+│   └── test_extract.py            # Unit tests for fetch\_weather.py
 │
 ├── docker-compose.yml
 ├── Dockerfile
