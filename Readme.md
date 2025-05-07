@@ -93,17 +93,17 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    Update your `profiles.yml` under the `dags/dbt_project/` folder with:
    
    ```yaml
-my_postgres:
-  target: dev
-  outputs:
-    dev:
-      type: postgres
-      host: localhost
-      user: postgres
-      password: postgres
-      dbname: weather_db
-      schema: public
-```
+  my_postgres:
+    target: dev
+    outputs:
+      dev:
+        type: postgres
+        host: localhost
+        user: postgres
+        password: postgres
+        dbname: weather_db
+        schema: public
+    ```
 
 
 10. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
@@ -116,11 +116,14 @@ my_postgres:
 
    Build and start the Airflow Docker containers:
 
-   ```bash
-   docker-compose up --build
-   ```
+   Run the following command from the root folder:
 
-   Access the Airflow UI at http://localhost:8080 (default login is admin / admin )
+    ```bash
+    docker-compose up --build
+    ```
+    
+    Access the Airflow UI at: [http://localhost:8080](http://localhost:8080) (Default login: `admin` / `admin`)
+
    
 10. **Running the Data Pipeline:**
 
