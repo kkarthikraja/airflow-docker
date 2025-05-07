@@ -93,17 +93,17 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    Update your `profiles.yml` under the `dags/dbt_project/` folder with:
    
    ```yaml
-  my_postgres:
-    target: dev
-    outputs:
-      dev:
-        type: postgres
-        host: localhost
-        user: postgres
-        password: postgres
-        dbname: weather_db
-        schema: public
-    ```
+    my_postgres:
+      target: dev
+      outputs:
+        dev:
+          type: postgres
+          host: localhost
+          user: postgres
+          password: postgres
+          dbname: weather_db
+          schema: public
+     ```
 
 
 10. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
@@ -125,7 +125,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    Access the Airflow UI at: [http://localhost:8080](http://localhost:8080) (Default login: `admin` / `admin`)
 
    
-10. **Running the Data Pipeline:**
+12. **Running the Data Pipeline:**
 
     The pipeline will automatically fetch weather data, perform transformation (using dbt), and load it into PostgreSQL.
 
@@ -133,7 +133,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
     Airflow will trigger dbt runs through the subprocess command.
 
-11. **Testing:**
+13. **Testing:**
 
     You can add unit tests for the dbt models inside the /tests folder.
 
@@ -141,7 +141,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
     Airflow will trigger dbt runs through the subprocess command.
    
-11. **Exception Handling:**
+14. **Exception Handling:**
 
     The API extraction step includes exception handling for failed requests.
 
