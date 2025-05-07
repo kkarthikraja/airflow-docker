@@ -99,7 +99,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
           host: localhost
           user: postgres
           password: postgres
-          dbname: weather_db
+          dbname: postgres
           schema: public
      ```
 
