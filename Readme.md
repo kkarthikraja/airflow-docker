@@ -78,17 +78,9 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 6. **Install PostgreSQL database:**
    Install PostgreSQL locally or use a Docker container. Make sure your credentials match the ones provided in the environment variables or ```bash profiles.yml ```.
 
-7. **Set up your PostgreSQL credentials as environment variables:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+7. **Run the Docker desktop on the background:**
 
-8. **Run the Docker desktop on the background:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-9. **Set up the dbt project:**
+8. **Set up the dbt project:**
 
    Update your `profiles.yml` under the `dags/dbt_project/` folder with:
    
@@ -106,13 +98,13 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
      ```
 
 
-10. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
+9. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
 
    ```bash
    docker exec -it airflow-docker-airflow-webserver-1 bashdocker exec -it airflow-docker-airflow-webserver-1 bash
    ``` 
 
-11. **Run Airflow with Docker:**
+10. **Run Airflow with Docker:**
 
    Build and start the Airflow Docker containers:
 
@@ -125,7 +117,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    Access the Airflow UI at: [http://localhost:8080](http://localhost:8080) (Default login: `admin` / `admin`)
 
    
-12. **Running the Data Pipeline:**
+11. **Running the Data Pipeline:**
 
     The pipeline will automatically fetch weather data, perform transformation (using dbt), and load it into PostgreSQL.
 
@@ -133,7 +125,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
     Airflow will trigger dbt runs through the subprocess command.
 
-13. **Testing:**
+12. **Testing:**
 
     You can add unit tests for the dbt models inside the /tests folder.
 
@@ -141,7 +133,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
     Airflow will trigger dbt runs through the subprocess command.
    
-14. **Exception Handling:**
+13. **Exception Handling:**
 
     The API extraction step includes exception handling for failed requests.
 
