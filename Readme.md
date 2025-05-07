@@ -49,8 +49,36 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
 1. **Clone the repository:**
   ```bash
   git clone https://github.com/kkarthikraja/airflow-docker.git
-  cd airflow-docker ```
+  cd airflow-docker
+  ```
 
 2. **Install required Python dependencies:**
    ```bash
    pip install -r requirements.txt
+   ```
+├── dags/  
+│   ├── weather_etl_dag.py         # Airflow DAG definition  
+│   ├── fetch_weather.py           # API data extraction script  
+│   └── weather_raw.json           # Sample raw data  
+│
+├── dbt_project/  
+│   ├── models/  
+│   │   ├── staging/  
+│   │   │   └── stg_weather_raw.sql  
+│   │   ├── dimensional/  
+│   │   │   ├── dim_location.sql  
+│   │   │   ├── dim_date.sql  
+│   │   │   ├── dim_weather_condition.sql  
+│   │   │   └── fact_weather.sql  
+│   │   └── tests/  
+│   │       └── fact_weather_test.sql  
+│   ├── dbt_project.yml  
+│   └── profiles.yml  
+│
+├── tests/  
+│   └── test_extract.py            # Unit tests for fetch_weather.py  
+│
+├── docker-compose.yml  
+├── requirements.txt  
+└── README.md  
+
