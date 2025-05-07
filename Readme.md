@@ -133,9 +133,8 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
 12. **Testing:**
 
-    You can add unit tests for the dbt models inside the /tests folder.
-
-    The pipeline includes a fact_weather_test.sql file that checks for NULLs in foreign keys.
+    - Unit tests for Python scripts: `tests/test_extract.py`
+    - dbt model tests: `dbt_project/models/tests/fact_weather_test.sql`
 
     Airflow will trigger dbt runs through the subprocess command.
    
