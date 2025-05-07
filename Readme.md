@@ -1,4 +1,4 @@
-# 🌦️ Weather Data Pipeline - Data Engineering Assignment
+# 🌦️ Weather Data Pipeline
 
 This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Apache Airflow**, **dbt**, and **PostgreSQL**. It fetches real-time weather data, transforms it using dimensional modeling principles (star schema), and loads it into a local Postgres data warehouse.
 
