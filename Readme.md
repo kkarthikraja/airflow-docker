@@ -34,7 +34,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 │   │   │   └── fact_weather.sql  
 │   │   └── tests/  
 │   │   │   └── fact_weather_test.sql
-│   │   │   └── test_extract.py            # Unit tests for fetch_weather.py
+│   │   │   └── test_extract.py    # Unit tests for fetch_weather.py
 │   ├── dbt_project.yml  
 │   └── profiles.yml  
 │
