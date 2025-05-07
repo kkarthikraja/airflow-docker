@@ -49,7 +49,7 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
 1. **Clone the repository:**
   ```bash
   git clone https://github.com/kkarthikraja/airflow-docker.git
-  cd airflow-docker
+  cd airflow-docker ```
 
 2. **Install required Python dependencies:**
    ```bash
