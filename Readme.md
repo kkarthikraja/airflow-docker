@@ -53,10 +53,10 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 ## Setup Instructions
 
 1. **Clone the repository:**
-  ```bash
-  git clone https://github.com/kkarthikraja/airflow-docker.git
-  cd airflow-docker
-  ```
+    ```bash
+    git clone https://github.com/kkarthikraja/airflow-docker.git
+    cd airflow-docker
+    ```
 
 2. **Install required Python dependencies:**
    ```bash
@@ -69,13 +69,13 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
    Export the following:
 
-  ```bash
-  export OPENWEATHERMAP_API_KEY=<your_api_key>
-  export DB_HOST=localhost
-  export DB_NAME=weather_db
-  export DB_USER=postgres
-  export DB_PASSWORD=postgres
-  ```
+    ```bash
+    export OPENWEATHERMAP_API_KEY=<your_api_key>
+    export DB_HOST=localhost
+    export DB_NAME=weather_db
+    export DB_USER=postgres
+    export DB_PASSWORD=postgres
+    ```
    
 5. **Download and Install Docker Desktop:**
    Download and install Docker Desktop from https://www.docker.com/products/docker-desktop and ensure it's running in the background.
