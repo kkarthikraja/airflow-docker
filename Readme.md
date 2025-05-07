@@ -43,3 +43,10 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+
+## Setup Instructions
+
+1. **Clone the repository:**
+  ```bash
+  git clone https://github.com/kkarthikraja/airflow-docker.git
+  cd airflow-docker
