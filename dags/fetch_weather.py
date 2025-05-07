@@ -14,7 +14,7 @@ import logging
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def fetch_weather():
-    API_KEY = '11b06ee31ceb982488fe3fe14edbf2cc'
+    API_KEY = 'YOUR_API_HERE'
     CITY = 'Aarhus'
     URL = f'https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric'
 
