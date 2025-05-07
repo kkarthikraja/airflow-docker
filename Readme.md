@@ -57,4 +57,25 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    ```bash
    pip install -r requirements.txt
    ```
+   
+3. **Set up your environment variables:**
+   Set the OpenWeatherMap API key as an environment variable:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+5. **Install required Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+6. **Install required Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+7. **Install required Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
