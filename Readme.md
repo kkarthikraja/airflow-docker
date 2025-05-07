@@ -27,13 +27,14 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 │   ├── models/  
 │   │   ├── staging/  
 │   │   │   └── stg_weather_raw.sql  
-│   │   ├── dimensional/  
+│   │   ├── marts/  
 │   │   │   ├── dim_location.sql  
 │   │   │   ├── dim_date.sql  
 │   │   │   ├── dim_weather_condition.sql  
 │   │   │   └── fact_weather.sql  
 │   │   └── tests/  
-│   │       └── fact_weather_test.sql  
+│   │   │   └── fact_weather_test.sql
+│   │   │   └── test_extract.py            # Unit tests for fetch_weather.py
 │   ├── dbt_project.yml  
 │   └── profiles.yml  
 │
@@ -56,29 +57,4 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    ```bash
    pip install -r requirements.txt
    ```
-├── dags/  
-│   ├── weather_etl_dag.py         # Airflow DAG definition  
-│   ├── fetch_weather.py           # API data extraction script  
-│   └── weather_raw.json           # Sample raw data  
-│
-├── dbt_project/  
-│   ├── models/  
-│   │   ├── staging/  
-│   │   │   └── stg_weather_raw.sql  
-│   │   ├── dimensional/  
-│   │   │   ├── dim_location.sql  
-│   │   │   ├── dim_date.sql  
-│   │   │   ├── dim_weather_condition.sql  
-│   │   │   └── fact_weather.sql  
-│   │   └── tests/  
-│   │       └── fact_weather_test.sql  
-│   ├── dbt_project.yml  
-│   └── profiles.yml  
-│
-├── tests/  
-│   └── test_extract.py            # Unit tests for fetch_weather.py  
-│
-├── docker-compose.yml  
-├── requirements.txt  
-└── README.md  
 
