@@ -11,6 +11,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 - **PostgreSQL** – Data warehouse
 - **SQLAlchemy & Pandas** – Raw data loading
 - **Docker** – Containerized setup
+- **Docker Desktop** 
 - **pytest** – Unit testing
 - **OpenWeatherMap API** – Real-time weather source [openweathermap](https://openweathermap.org/)
 
