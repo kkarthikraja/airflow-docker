@@ -12,7 +12,7 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
 - **SQLAlchemy & Pandas** – Raw data loading
 - **Docker** – Containerized setup
 - **pytest** – Unit testing
-- **OpenWeatherMap API** – Real-time weather source
+- **OpenWeatherMap API** – Real-time weather source [openweathermap](https://openweathermap.org/)
 
 ---
 
@@ -50,3 +50,7 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
   ```bash
   git clone https://github.com/kkarthikraja/airflow-docker.git
   cd airflow-docker
+
+2. **Install required Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
