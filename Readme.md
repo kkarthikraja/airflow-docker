@@ -107,7 +107,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 9. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
     
    ```bash
-   docker exec -it airflow-docker-airflow-webserver-1 bashdocker exec -it airflow-docker-airflow-webserver-1 bash
+   docker exec -it airflow-docker-airflow-webserver-1 bash
    ``` 
 
 10. **Run Airflow with Docker:**
