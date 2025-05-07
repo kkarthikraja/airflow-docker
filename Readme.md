@@ -82,7 +82,7 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    Download and install Docker Desktop from https://www.docker.com/products/docker-desktop and ensure it's running in the background.
 
 6. **Install PostgreSQL database:**
-   Install PostgreSQL locally or use a Docker container. Make sure your credentials match the ones provided in the environment variables or ```bash profiles.yml ```.
+   Install PostgreSQL locally or use a Docker container. Make sure your credentials match the ones provided in the environment variables or `profiles.yml`.
 
 7. **Run the Docker desktop on the background:**
 
