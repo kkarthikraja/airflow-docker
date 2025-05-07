@@ -18,82 +18,31 @@ This project explains a complete ETL pipeline using **OpenWeatherMap API**, **Ap
 
 ## 📁 Project Structure
 
-├── dags/
-│ ├── weather_etl_dag.py # Airflow DAG definition
-│ ├── fetch_weather.py # API data extraction script
-│ └── weather_raw.json # Sample raw data
+├── dags/  
+│   ├── weather_etl_dag.py         # Airflow DAG definition  
+│   ├── fetch_weather.py           # API data extraction script  
+│   └── weather_raw.json           # Sample raw data  
 │
-├── dbt_project/
-│ ├── models/
-│ │ ├── staging/
-│ │ │ └── stg_weather_raw.sql
-│ │ ├── dimensional/
-│ │ │ ├── dim_location.sql
-│ │ │ ├── dim_date.sql
-│ │ │ ├── dim_weather_condition.sql
-│ │ │ └── fact_weather.sql
-│ │ └── tests/
-│ │ └── fact_weather_test.sql
-│ ├── dbt_project.yml
-│ └── profiles.yml
+├── dbt_project/  
+│   ├── models/  
+│   │   ├── staging/  
+│   │   │   └── stg_weather_raw.sql  
+│   │   ├── dimensional/  
+│   │   │   ├── dim_location.sql  
+│   │   │   ├── dim_date.sql  
+│   │   │   ├── dim_weather_condition.sql  
+│   │   │   └── fact_weather.sql  
+│   │   └── tests/  
+│   │       └── fact_weather_test.sql  
+│   ├── dbt_project.yml  
+│   └── profiles.yml  
 │
-├── tests/
-│ └── test_extract.py # Unit tests for fetch_weather.py
+├── tests/  
+│   └── test_extract.py            # Unit tests for fetch_weather.py  
 │
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-
-.
-├── dags/
-│   ├── dbt_project/
-│   │   ├── logs/
-│   │   ├── models/
-│   │   │   ├── marts/
-│   │   │   │   ├── dim_location.sql
-│   │   │   │   ├── dim_date.sql
-│   │   │   │   ├── dim_weather_condition.sql
-│   │   │   │   ├── fact_weather.sql
-│   │   │   └── staging/
-│   │   │   │   ├── stg_weather_raw.sql
-│   │   ├── seeds/
-│   │   ├── snapshots/
-│   │   ├── target/
-│   │   │   ├── compiled/
-│   │   │   │   ├── dbt_project/
-│   │   │   │   │   ├── models/
-│   │   │   │   │   │   ├── marts/
-│   │   │   │   │   │   ├── schema.yml
-│   │   │   │   │   │   └── staging/
-│   │   │   │   │   └── tests/
-│   │   │   │   └── weather_project/
-│   │   │   │       ├── models/
-│   │   │   │       │   ├── marts/
-│   │   │   │       │   └── staging/
-│   │   │   │       └── tests/
-│   │   │   └── run/
-│   │   │       ├── dbt_project/
-│   │   │       │   ├── models/
-│   │   │       │   │   ├── marts/
-│   │   │       │   │   ├── schema.yml
-│   │   │       │   │   └── staging/
-│   │   │       │   └── tests/
-│   │   │       └── weather_project/
-│   │   │           ├── models/
-│   │   │           │   ├── marts/
-│   │   │           │   └── staging/
-│   │   │           └── tests/
-│   │   └── tests/
-│   └── __pycache__/
-├── dbt_project/
-│   ├── logs/
-│   └── profiles.yml
-├── logs/
-│   ├── dag_id=hello_world_test/
-│   ├── dag_id=weather_etl_dag/
-│   ├── dag_processor_manager/
-│   └── scheduler/
-├── plugins/
+├── docker-compose.yml  
+├── requirements.txt  
+└── README.md 
 
 ## Setup Instructions
 
