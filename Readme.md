@@ -59,7 +59,9 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
    ```
    
 3. **Set up your environment variables:**
-   Set the OpenWeatherMap API key as an environment variable:
+
+   Set the OpenWeatherMap API key as an environment variable @[openweathermap](https://openweathermap.org/)
+
    ```bash
    pip install -r requirements.txt
    ```
