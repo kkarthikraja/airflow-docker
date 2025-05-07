@@ -1,0 +1,19 @@
+name: dbt_project
+version: '1.0'
+config-version: 2
+
+profile: dbt_project
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+
+models:
+  weather_project:
+    marts:
+      +materialized: table
+    staging:
+      +materialized: view
+
+

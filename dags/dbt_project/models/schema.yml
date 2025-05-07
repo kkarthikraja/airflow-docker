@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: raw_weather_data_ref
+    description: Raw weather data from OpenWeatherMap
+
+  - name: dim_date
+    description: Dimension table for dates
+    columns:
+      - name: date_id
+        tests:
+          - not_null
+          - unique
+      - name: date
+        tests:
+          - not_null
+      - name: year
+        tests:
+          - not_null
+
+  - name: dim_location
+    description: Dimension table for location data
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+      - name: city
+        tests:
+          - not_null
+
+  - name: dim_weather_condition
+    description: Dimension table for weather condition descriptions
+    columns:
+      - name: weather_condition_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_weather') 
+              field: weather_condition_id
+      - name: weather_main
+        tests:
+          - not_null
+
+  - name: fact_weather
+    description: Fact table with weather metrics
+    columns:
+      - name: date_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_id
+      - name: location_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_location')
+              field: location_id
+      - name: weather_condition_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_weather_condition')
+              field: weather_condition_id
+      - name: temperature
+        tests:
+          - not_null

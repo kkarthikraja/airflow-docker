@@ -1,0 +1,1 @@
+SELECT * FROM public.stg_weather_raw
