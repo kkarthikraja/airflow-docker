@@ -18,32 +18,37 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
 ## 📁 Project Structure
 
-├── dags/  
-│   ├── weather_etl_dag.py         # Airflow DAG definition  
-│   ├── fetch_weather.py           # API data extraction script  
-│   └── weather_raw.json           # Sample raw data  
+```
+
+├── dags/
+│   ├── weather_etl_dag.py         # Airflow DAG definition
+│   ├── fetch_weather.py           # API data extraction script
+│   └── weather_raw.json           # Sample raw data
 │
-├── dbt_project/  
-│   ├── models/  
-│   │   ├── staging/  
-│   │   │   └── stg_weather_raw.sql  
-│   │   ├── marts/  
-│   │   │   ├── dim_location.sql  
-│   │   │   ├── dim_date.sql  
-│   │   │   ├── dim_weather_condition.sql  
-│   │   │   └── fact_weather.sql  
-│   │   └── tests/  
-│   │   │   └── fact_weather_test.sql
-│   │   │   └── test_extract.py    # Unit tests for fetch_weather.py
-│   ├── dbt_project.yml  
-│   └── profiles.yml  
+├── dbt\_project/
+│   ├── models/
+│   │   ├── staging/
+│   │   │   └── stg\_weather\_raw\.sql
+│   │   ├── marts/
+│   │   │   ├── dim\_location.sql
+│   │   │   ├── dim\_date.sql
+│   │   │   ├── dim\_weather\_condition.sql
+│   │   │   └── fact\_weather.sql
+│   │   └── tests/
+│   │       ├── fact\_weather\_test.sql
+│   │       └── test\_extract.py    # Unit tests for fetch\_weather.py
+│   ├── dbt\_project.yml
+│   └── profiles.yml
 │
-├── tests/  
-│   └── test_extract.py            # Unit tests for fetch_weather.py  
+├── tests/
+│   └── test\_extract.py            # Unit tests for fetch\_weather.py
 │
-├── docker-compose.yml  
-├── requirements.txt  
-└── README.md 
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+```` 
 
 ## Setup Instructions
 
@@ -139,33 +144,4 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
     Any errors encountered during the pipeline execution will be logged by Airflow.
 
-```
 
-├── dags/
-│   ├── weather\_etl\_dag.py         # Airflow DAG definition
-│   ├── fetch\_weather.py           # API data extraction script
-│   └── weather\_raw\.json           # Sample raw data
-│
-├── dbt\_project/
-│   ├── models/
-│   │   ├── staging/
-│   │   │   └── stg\_weather\_raw\.sql
-│   │   ├── marts/
-│   │   │   ├── dim\_location.sql
-│   │   │   ├── dim\_date.sql
-│   │   │   ├── dim\_weather\_condition.sql
-│   │   │   └── fact\_weather.sql
-│   │   └── tests/
-│   │       ├── fact\_weather\_test.sql
-│   │       └── test\_extract.py    # Unit tests for fetch\_weather.py
-│   ├── dbt\_project.yml
-│   └── profiles.yml
-│
-├── tests/
-│   └── test\_extract.py            # Unit tests for fetch\_weather.py
-│
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-
-````
