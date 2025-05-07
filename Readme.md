@@ -61,23 +61,78 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 3. **Set up your environment variables:**
 
    Set the OpenWeatherMap API key as an environment variable @[openweathermap](https://openweathermap.org/)
-
-   ```bash
-   pip install -r requirements.txt
-   ```
    
-5. **Install required Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   
-6. **Install required Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   
-7. **Install required Python dependencies:**
+5. **Download and Install Docker Desktop:**
    ```bash
    pip install -r requirements.txt
    ```
 
+6. **Install PostgreSQL database:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+7. **Set up your PostgreSQL credentials as environment variables:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+8. **Run the Docker desktop on the background:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+9. **Set up the dbt project:**
+
+   Navigate to the dbt folder and set up your dbt profile with your PostgreSQL credentials on profiles.yml
+   
+   ```bash
+  my_postgres:
+    target: dev
+    outputs:
+      dev:
+        type: postgres
+        host: <your_db_host>
+        user: <your_db_user>
+        password: <your_db_password>
+        dbname: <your_db_name>
+        schema: public
+   ```
+
+10. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
+
+   ```bash
+   docker exec -it airflow-docker-airflow-webserver-1 bashdocker exec -it airflow-docker-airflow-webserver-1 bash
+   ``` 
+
+11. **Run Airflow with Docker:**
+
+   Build and start the Airflow Docker containers:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+   Access the Airflow UI at http://localhost:8080 (default login is admin / admin )
+   
+10. **Running the Data Pipeline:**
+
+    The pipeline will automatically fetch weather data, perform transformation (using dbt), and load it into PostgreSQL.
+
+    The Airflow DAG is scheduled to run every 60 minutes.
+
+    Airflow will trigger dbt runs through the subprocess command.
+
+11. **Testing:**
+
+    You can add unit tests for the dbt models inside the /tests folder.
+
+    The pipeline includes a fact_weather_test.sql file that checks for NULLs in foreign keys.
+
+    Airflow will trigger dbt runs through the subprocess command.
+   
+11. **Exception Handling:**
+
+    The API extraction step includes exception handling for failed requests.
+
+    Any errors encountered during the pipeline execution will be logged by Airflow.
