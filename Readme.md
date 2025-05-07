@@ -61,16 +61,22 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 3. **Set up your environment variables:**
 
    Set the OpenWeatherMap API key as an environment variable @[openweathermap](https://openweathermap.org/)
+
+   Export the following:
+
+  ```bash
+  export OPENWEATHERMAP_API_KEY=<your_api_key>
+  export DB_HOST=localhost
+  export DB_NAME=weather_db
+  export DB_USER=postgres
+  export DB_PASSWORD=postgres
+  ```
    
 5. **Download and Install Docker Desktop:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+   Download and install Docker Desktop from https://www.docker.com/products/docker-desktop and ensure it's running in the background.
 
 6. **Install PostgreSQL database:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+   Install PostgreSQL locally or use a Docker container. Make sure your credentials match the ones provided in the environment variables or ```bash profiles.yml ```.
 
 7. **Set up your PostgreSQL credentials as environment variables:**
    ```bash
@@ -84,20 +90,21 @@ This project creates a complete ETL pipeline using **OpenWeatherMap API**, **Apa
 
 9. **Set up the dbt project:**
 
-   Navigate to the dbt folder and set up your dbt profile with your PostgreSQL credentials on profiles.yml
+   Update your `profiles.yml` under the `dags/dbt_project/` folder with:
    
-   ```bash
-  my_postgres:
-    target: dev
-    outputs:
-      dev:
-        type: postgres
-        host: <your_db_host>
-        user: <your_db_user>
-        password: <your_db_password>
-        dbname: <your_db_name>
-        schema: public
-   ```
+   ```yaml
+my_postgres:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      dbname: weather_db
+      schema: public
+```
+
 
 10. **Run the Airflow on your docker from executing on your root folder /docker-airflow/ :**
 
